@@ -1,16 +1,24 @@
 export function VerifiedBadge() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="h-4 w-4 text-[#1d9bf0] select-none flex-shrink-0 drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]"
+    <span
+      className="inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#1d9bf0] select-none drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]"
       aria-label="Verified"
+      role="img"
     >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 3a1 1 0 0 0-.814.476l-1.35 2.126-2.476-.411a1 1 0 0 0-1.129.821l.279 2.498-1.844 1.201a1 1 0 0 0-.382 1.341l1.1 2.308-1.1 2.308a1 1 0 0 0 .382 1.341l1.844 1.201-.279 2.498a1 1 0 0 0 1.129.821l2.476-.411 1.35 2.126a1 1 0 0 0 1.628 0l1.35-2.126 2.476.411a1 1 0 0 0 1.129-.821l.279-2.498 1.844-1.201a1 1 0 0 0 .382-1.341l-1.1-2.308 1.1-2.308a1 1 0 0 0-.382-1.341l-1.844-1.201-.279-2.498a1 1 0 0 0-1.129-.821l-2.476.411-1.35-2.126A1 1 0 0 0 12 3zm4.707 7.707a1 1 0 0 0-1.414-1.414L11 13.586l-2.293-2.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l5-5z"
-      />
-    </svg>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        className="h-2.5 w-2.5"
+        aria-hidden
+      >
+        <path
+          d="M5 12.5L9.5 17 19 7.5"
+          stroke="white"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
   );
 }

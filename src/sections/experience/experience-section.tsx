@@ -1,9 +1,18 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { siteConfig } from "@/lib/site-config";
+
+const COMPANY_LOGOS: Record<string, { src: string; alt: string }> = {
+  okcredit: { src: "/logos/okcredit.jpeg", alt: "OkCredit" },
+  angelone: { src: "/logos/angleone.png", alt: "Angel One" },
+  lenskart: { src: "/logos/lenskart.jpeg", alt: "Lenskart" },
+  undp: { src: "/logos/undp.png", alt: "UNDP" },
+  bajaj: { src: "/logos/bajaj%20auto.png", alt: "Bajaj Auto" },
+};
 
 export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -31,28 +40,19 @@ export function ExperienceSection() {
   );
 
   const renderCompanyLogo = (logoType: string) => {
-    switch (logoType) {
-      case "walt":
-        return (
-          <span className="inline-flex h-3.5 w-3.5 items-center justify-center rounded bg-lime-500 text-[0.55rem] font-bold text-black select-none">
-            W
-          </span>
-        );
-      case "omega":
-        return (
-          <span className="inline-flex h-3.5 w-3.5 items-center justify-center rounded bg-cyan-500 text-[0.55rem] font-bold text-black select-none">
-            Ω
-          </span>
-        );
-      case "theta":
-        return (
-          <span className="inline-flex h-3.5 w-3.5 items-center justify-center rounded bg-emerald-500 text-[0.55rem] font-bold text-black select-none">
-            Θ
-          </span>
-        );
-      default:
-        return null;
-    }
+    const logo = COMPANY_LOGOS[logoType];
+    if (!logo) return null;
+    return (
+      <span className="inline-flex h-4 w-4 items-center justify-center overflow-hidden rounded bg-white/5 ring-1 ring-white/10">
+        <Image
+          src={logo.src}
+          alt={logo.alt}
+          width={16}
+          height={16}
+          className="h-4 w-4 object-contain"
+        />
+      </span>
+    );
   };
 
   return (
@@ -72,14 +72,12 @@ export function ExperienceSection() {
       {/* Timeline Items */}
       <div className="flex flex-col gap-12">
         {items.map((item, index) => (
-          <div key={index} className="gsap-exp-item grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6">
-            {/* Period Column */}
-            <div className="text-base font-medium tracking-wider text-muted-text font-mono pt-1">
+          <div key={index} className="gsap-exp-item flex flex-col gap-2">
+            <div className="text-base font-medium tracking-wider text-muted-text font-mono">
               {item.period}
             </div>
 
-            {/* Content Column */}
-            <div className="sm:col-span-3 flex flex-col items-start gap-2">
+            <div className="flex flex-col items-start gap-2">
               {/* Title & Company & Badge row */}
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-base text-muted-text">
                 <span className="font-medium text-white">{item.role}</span>

@@ -146,7 +146,7 @@ export function WorkSection() {
   return (
     <section ref={containerRef} className="w-full border-y border-zinc-900/60 bg-[#121212]/50 text-left relative overflow-hidden">
       {/* Header Container (outside dotted area, left-aligned) */}
-      <div className="max-w-[640px] mx-auto w-full px-5 pt-12 pb-4">
+      <div className="max-w-[640px] mx-auto w-full px-5 pt-8 pb-4">
         <div className="gsap-work-header flex items-center gap-2 mb-3">
           <p className="text-base font-medium tracking-[0.25em] text-muted-text uppercase select-none font-mono">
             {siteConfig.work.label}

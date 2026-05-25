@@ -1,14 +1,13 @@
 export const siteConfig = {
-  name: "Jacob Vos",
-  title: "Design Engineer",
-  established: "EST. 1997",
-  email: "hello@jacobvos.com",
+  name: "Taranpreet Singh",
+  title: "Economics Student",
+  established: "SRCC'27",
+  email: "Taranpreetsingh1177@gmail.com",
   bio: {
-    intro: "Hey, I'm Jacob a design engineer at",
-    company: "Walt",
-    location: "Lagos, Portugal",
-    specialty:
-      "where I specialize in crafting polished web interfaces with a strong focus on accessibility, web animation, and product design.",
+    intro: "Hey, I'm Taranpreet, studying",
+    school: "Economics (Hons.) at SRCC",
+    location: "Delhi",
+    specialty: "",
   },
   work: {
     label: "WORK",
@@ -18,37 +17,87 @@ export const siteConfig = {
   experience: {
     label: "EXPERIENCE",
     description:
-      "Throughout my career, I've worked on various projects, from building scalable systems to designing user-friendly interfaces. Here's a brief overview.",
+      "Across strategy internships and live consulting projects—from export policy and fintech to eyewear, energy, and development—I've worked with startups, enterprises, and global institutions. Here's a brief overview.",
     items: [
       {
-        period: "2024 — NOW",
-        badge: "Live Project",
-        role: "Design engineer",
-        company: "Walt",
-        logoType: "walt",
-        link: "https://walt.co",
-        description:
-          "Designed a real-time waitlist and dashboard for monitoring sign ups with live updates, reducing latency by 15%",
-      },
-      {
-        period: "2021 — 2024",
+        period: "Jan 2026 — Mar 2026",
         badge: "Internship",
-        role: "Design engineer",
-        company: "Omega",
-        logoType: "omega",
-        link: "https://omega.dev",
+        role: "Strategy Intern",
+        company: "Toreta",
+        logoType: "toreta",
+        link: "https://www.toreta.food/",
         description:
-          "Designed and built an admin panel for enterprise clients, scaling to support over 500 active users as well as designing high-quality user flows.",
+          "Built kitchen-by-kitchen financial models and investor-ready projections; streamlined on-site operations to improve workflow efficiency by 34%.",
       },
       {
-        period: "2017 — 2020",
-        badge: "Full-time",
-        role: "Software engineer",
-        company: "Theta",
-        logoType: "theta",
-        link: "https://theta.sh",
+        period: "Nov 2025 — Jan 2026",
+        badge: "Live Project",
+        role: "Consulting Analyst",
+        company: "Bajaj Auto Ltd.",
+        logoType: "bajaj",
+        link: "https://www.bajajauto.com",
         description:
-          "Developed the user interface for a crypto payment gateway, ensuring compliance with global accessibility standards.",
+          "Revamped 4 core BOLT training modules for 10,000+ employees in 3 languages; engineered gamified, scenario-based learning to drive policy compliance.",
+      },
+      {
+        period: "July 2025",
+        badge: "Internship",
+        role: "Intern, Foreign Trade Policy",
+        company: "SGEPC",
+        logoType: "sgtepc",
+        link: "https://sportsgoodsindia.org/Default.aspx",
+        description:
+          "Supported the Head of Policy on Japan–India FTA Summit discussion questions; analysed 25,000+ rows of trade data across 15+ partners and identified 30+ high-growth SKUs for Indian exporters.",
+      },
+      {
+        period: "Dec 2024 — Mar 2025",
+        badge: "Internship",
+        role: "Strategy Intern",
+        company: "OkCredit",
+        logoType: "okcredit",
+        link: "https://okcredit.in",
+        description:
+          "Led go-to-market for OkDistributor; ran 50+ MSME interviews and deployed automated LinkedIn and email lead generation with Clay AI across 10,000+ SMEs.",
+      },
+      {
+        period: "Jan 2025 — Mar 2025",
+        badge: "Live Project",
+        role: "Consulting Analyst",
+        company: "Angel One",
+        logoType: "angelone",
+        link: "https://www.angelone.in",
+        description:
+          "Architected community feature roadmap from 250+ surveys; built 6 user personas, benchmarked eToro and Zerodha, and aligned AI moderation recommendations with SEBI guidelines.",
+      },
+      {
+        period: "Jan 2025 — Mar 2025",
+        badge: "Live Project",
+        role: "Consulting Analyst",
+        company: "Lenskart",
+        logoType: "lenskart",
+        link: "https://www.lenskart.com",
+        description:
+          "Analysed 900k+ data rows with statistical modeling; engineered a 20+ parameter store rubric, audited 10+ stores, and informed supplier rebalancing via root-cause analysis on 30k+ failures.",
+      },
+      {
+        period: "Feb 2025 — Mar 2025",
+        badge: "Live Project",
+        role: "Consulting Analyst",
+        company: "BHEL",
+        logoType: "bhel",
+        link: "https://www.bhel.com",
+        description:
+          "Audited FY24 annual report against 7 ICAI criteria and flagged 6 key gaps; redesigned report architecture into a 4-part narrative benchmarked against award-winning corporate reports.",
+      },
+      {
+        period: "Oct 2024 — Dec 2024",
+        badge: "Live Project",
+        role: "Consulting Analyst",
+        company: "UNDP India",
+        logoType: "undp",
+        link: "https://www.undp.org/india",
+        description:
+          "Architected a 90+ page report analysing NITI Aayog SDG gaps across states; evaluated SEBI ICDR frameworks and formulated risk mitigation strategies for Indian NPOs.",
       },
     ],
   },
@@ -58,23 +107,13 @@ export const siteConfig = {
     socials: [
       {
         platform: "Email",
-        handle: "hello@jacobvos.com",
-        href: "mailto:hello@jacobvos.com",
-      },
-      {
-        platform: "X.com",
-        handle: "@jacob",
-        href: "https://x.com/jacob",
-      },
-      {
-        platform: "GitHub",
-        handle: "@jv",
-        href: "https://github.com/jv",
+        handle: "Taranpreetsingh1177@gmail.com",
+        href: "mailto:Taranpreetsingh1177@gmail.com",
       },
       {
         platform: "LinkedIn",
-        handle: "/in/jacobvos",
-        href: "https://linkedin.com/in/jacobvos",
+        handle: "taranpreet-singh-822a95221",
+        href: "https://www.linkedin.com/in/taranpreet-singh-822a95221/",
       },
     ],
   },

@@ -24,15 +24,10 @@ export function HeroSection() {
         { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
         "-=0.4"
       )
-      .fromTo(".gsap-hero-title", 
-        { y: 10, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
-        "-=0.35"
-      )
       .fromTo(".gsap-hero-bio", 
         { y: 12, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
-        "-=0.3"
+        "-=0.35"
       )
       .fromTo(".gsap-hero-tip", 
         { y: 8, opacity: 0 },
@@ -44,48 +39,47 @@ export function HeroSection() {
   );
 
   return (
-    <section ref={containerRef} className="flex flex-col items-start pb-12 pt-4 text-left w-full">
+    <section ref={containerRef} className="flex flex-col items-start pb-8 pt-4 text-left w-full">
       <div className="flex flex-col items-start gap-4 mb-6">
         <div className="gsap-hero-avatar overflow-hidden rounded-2xl p-0.5 bg-zinc-900/50 flex-shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_8px_20px_rgba(0,0,0,0.4)] transition-transform duration-300 hover:scale-[1.03]">
           <Image
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face"
+            src="/profile.png"
             alt={`${siteConfig.name} profile`}
             width={56}
-            height={56}
-            className="h-14 w-14 rounded-[14px] object-cover"
+            height={75}
+            className="aspect-[3/4] w-14 rounded-[14px] object-cover object-top"
             priority
           />
         </div>
 
         <div className="flex flex-col items-start text-left">
-          <div className="gsap-hero-name flex items-center gap-1.5 mb-0.5">
+          <div className="gsap-hero-name flex items-center gap-1.5">
             <h1 className="text-base font-medium tracking-tight text-white">
               {siteConfig.name}
             </h1>
             <VerifiedBadge />
           </div>
-          <p className="gsap-hero-title text-base font-normal text-muted-text tracking-wide font-mono select-none">
-            {siteConfig.title}
-          </p>
         </div>
       </div>
 
       <p className="gsap-hero-bio w-full text-base leading-relaxed text-muted-text font-normal">
         {siteConfig.bio.intro}{" "}
-        <span className="inline-flex items-center gap-1 font-medium text-white hover:underline cursor-pointer">
-          {siteConfig.bio.company}
-          <span className="inline-flex h-3.5 w-3.5 items-center justify-center rounded bg-[#84cc16] text-[0.55rem] font-bold text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] select-none">
-            W
-          </span>
+        <span className="font-medium text-white">
+          {siteConfig.bio.school}
         </span>{" "}
         based in{" "}
-        <span className="text-white hover:underline cursor-pointer">
+        <span className="text-white">
           {siteConfig.bio.location}
         </span>{" "}
-        <span role="img" aria-label="Portugal flag" className="text-base select-none">
-          🇵🇹
-        </span>{" "}
-        {siteConfig.bio.specialty}
+        <span role="img" aria-label="India flag" className="text-base select-none">
+          🇮🇳
+        </span>
+        {siteConfig.bio.specialty ? (
+          <>
+            {" "}
+            {siteConfig.bio.specialty}
+          </>
+        ) : null}
       </p>
 
       <div className="gsap-hero-tip mt-8 flex items-center justify-center w-full">
