@@ -46,8 +46,8 @@ export function HeroSection() {
             src="/profile.png"
             alt={`${siteConfig.name} profile`}
             width={56}
-            height={75}
-            className="aspect-[3/4] w-14 rounded-[14px] object-cover object-top"
+            height={56}
+            className="h-14 w-14 rounded-[14px] object-cover"
             priority
           />
         </div>
@@ -78,6 +78,28 @@ export function HeroSection() {
           <>
             {" "}
             {siteConfig.bio.specialty}
+          </>
+        ) : siteConfig.bio.hobbies.length > 0 ? (
+          <>
+            . {siteConfig.bio.hobbiesIntro}{" "}
+            {siteConfig.bio.hobbies.map((hobby, index) => {
+              const isLast = index === siteConfig.bio.hobbies.length - 1;
+
+              return (
+                <span key={hobby.label}>
+                  {index > 0 && (isLast ? " and " : ", ")}
+                  <span className="text-white">{hobby.label}</span>{" "}
+                  <span
+                    role="img"
+                    aria-label={hobby.label}
+                    className="select-none"
+                  >
+                    {hobby.emoji}
+                  </span>
+                  {isLast ? "." : null}
+                </span>
+              );
+            })}
           </>
         ) : null}
       </p>

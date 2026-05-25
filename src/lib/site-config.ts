@@ -2,12 +2,18 @@ export const siteConfig = {
   name: "Taranpreet Singh",
   title: "Economics Student",
   established: "SRCC'27",
-  email: "Taranpreetsingh1177@gmail.com",
+  email: "taranpreetsingh1177@gmail.com",
   bio: {
     intro: "Hey, I'm Taranpreet, studying",
     school: "Economics (Hons.) at SRCC",
     location: "Delhi",
     specialty: "",
+    hobbiesIntro: "Outside of that, I enjoy",
+    hobbies: [
+      { label: "vibe coding", emoji: "💻" },
+      { label: "badminton", emoji: "🏸" },
+      { label: "reading books", emoji: "📚" },
+    ],
   },
   work: {
     label: "WORK",
@@ -107,8 +113,8 @@ export const siteConfig = {
     socials: [
       {
         platform: "Email",
-        handle: "Taranpreetsingh1177@gmail.com",
-        href: "mailto:Taranpreetsingh1177@gmail.com",
+        handle: "taranpreetsingh1177@gmail.com",
+        href: "mailto:taranpreetsingh1177@gmail.com",
       },
       {
         platform: "LinkedIn",

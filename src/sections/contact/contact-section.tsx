@@ -54,21 +54,41 @@ export function ContactSection() {
     }));
   };
 
+  const showToast = (message: string) => {
+    window.dispatchEvent(
+      new CustomEvent("show-toast", {
+        detail: { message },
+      })
+    );
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setFormState("submitting");
 
-    // Simulate submission delay
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    setFormState("idle");
-    window.dispatchEvent(
-      new CustomEvent("show-toast", {
-        detail: { message: "Message sent successfully!" },
-      })
-    );
-    setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        showToast(data.error ?? "Failed to send message. Please try again.");
+        return;
+      }
+
+      showToast("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch {
+      showToast("Failed to send message. Please try again.");
+    } finally {
+      setFormState("idle");
+    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
